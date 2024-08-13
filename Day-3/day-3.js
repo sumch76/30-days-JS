@@ -90,3 +90,12 @@ else  if(marks<60 && marks>=50)
 }
 else
 console.log("grade D");
+
+//Activity 4: Conditional (Ternary) Operator
+
+//Task 6: Write a program that uses the ternary operator to check if a number is even or odd and log the result to the console.
+
+let number=78;
+let result = number % 2 === 0 ? "Even" : "Odd";
+console.log(result);
+
