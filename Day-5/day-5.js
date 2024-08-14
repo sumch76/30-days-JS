@@ -88,7 +88,48 @@ person("rakesh");
 
 // Task 9: Write a higher-order function that takes a function and a number, and calls the function that many times.
 
+const repeatFunction=(func,times)=>
+{
+    for(let i=0;i<times;i++)
+    {
+        func();
+    }
+}
 
+const greet=()=>console.log("hello world");
 
+repeatFunction(greet,5);
 
 // Task 10: Write a higher-order function that takes two functions and a value, applies the first function to the value, and then applies the second function to the result.
+
+const applyFunction=(func1,func2,value)=>
+{
+    console.log(func1(func2(value)));
+}
+
+const double=(num)=>num*2;
+
+applyFunction(Math.sqrt,double,25);
+
+
+
+
+// Task 11: Write a higher-order function that takes two functions and a value, applies the first function to the value, and then applies the second function to the result.
+
+function compose(fn1, fn2) {
+    return function (val) {
+      return fn2(fn1(val));
+    };
+  }
+  function double(num) {
+    return num * 2;
+  }
+  function square(num) {
+    return num ** 2;
+  }
+  const doubleThenSquare = compose(double, square);
+  console.log(doubleThenSquare(2));
+  console.log(doubleThenSquare(3));
+
+
+
