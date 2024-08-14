@@ -60,16 +60,29 @@ console.log(sum(10,20));
 
 
 // Task 6: Write an arrow function to check if a string contains a specific character and return a boolean value.
+const string=(str,char)=>str.includes(char);
 
+console.log(string("hello","o"));
+console.log(string("sumit chaubey","y"));
+console.log(string("sumit chaubey","k"));
 
 // Activity 4: Function Parameters and Default Values
 
 // Task 7: Write a function that takes two parameters and returns their product. Provide a default value for the second parameter.
 
+const product=(num1,num2=1)=>num1*num2;
+console.log(product(4));
+console.log(product(7,8));
+
+
 
 // Task 8: Write a function that takes a person's name and age and returns a greeting message. Provide a default value for the age.
 
 
+const person=(name,age=undefined)=>console.log(`hello my name is ${name} and age is ${age}!!!!!`)
+
+person("sumit",24);
+person("rakesh");
 
 // Activity 5: Higher-Order Functions
 
