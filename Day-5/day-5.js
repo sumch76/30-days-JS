@@ -97,8 +97,10 @@ const repeatFunction=(func,times)=>
 }
 
 const greet=()=>console.log("hello world");
+const greet2=()=>console.log("hello javascript world");
 
 repeatFunction(greet,5);
+repeatFunction(greet2,2);
 
 // Task 10: Write a higher-order function that takes two functions and a value, applies the first function to the value, and then applies the second function to the result.
 
