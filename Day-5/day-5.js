@@ -102,14 +102,14 @@ repeatFunction(greet,5);
 
 // Task 10: Write a higher-order function that takes two functions and a value, applies the first function to the value, and then applies the second function to the result.
 
-const applyFunction=(func1,func2,value)=>
+const applyFunction1=(func1,func2,value)=>
 {
     console.log(func1(func2(value)));
 }
 
-const double=(num)=>num*2;
+const double1=(num)=>num*2;
 
-applyFunction(Math.sqrt,double,25);
+applyFunction1(Math.sqrt,double,25);
 
 
 
