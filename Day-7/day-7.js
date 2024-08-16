@@ -72,7 +72,6 @@ console.log(library);
 console.log("name of the library :" +library.name);
 library.books.forEach( function (book){
     console.log(book.title);
-
 });
 
 
