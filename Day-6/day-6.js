@@ -159,7 +159,20 @@ for(let i=0;i<array12.length;i++)
     console.log(array12[i]);
 }
 // Task 11: Use the forEach method to iterate over the array and log each element to the console.
+
+const array13=[3,4,5,6,7];
+array13.forEach((element)=>console.log(element));
+
+// forEach() method executes a provided function once for each array element.
+
 // Activity 5: Multi-dimensional Arrays
 
 // Task 12: Create a two-dimensional array (matrix) and log the entire array to the console.
+
+const matrix=[[1,2,3],[4,5,6],[7,8,9]];
+console.log(matrix);
+
 // Task 13: Access and log a specific element from the two-dimensional array.
+
+const matrix2=[[1,2,3],[4,5,6],[7,8,9]];
+console.log(matrix2[1][2]); // logs 6
