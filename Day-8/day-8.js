@@ -103,3 +103,11 @@ const person2 = {
 };
 
 console.log(person2.greeting);
+
+// Activity 6: Arrow Functions
+
+// Task 10: Write an arrow function that calculates the sum of two numbers and returns the result.
+
+const sum = (num1, num2) => num1 + num2;
+
+console.log(sum(10, 20));
