@@ -47,6 +47,15 @@ const existingArray = [1, 2, 3];
 const newArray = [...existingArray, 4, 5, 6];
 
 console.log(newArray);
+
+
+const existingArray2 = ["sumit","rakesh","shubham"];
+const newArray2 = [...existingArray2,...newArray];
+console.log(newArray2);
+//we can add array to new array.
+
+
+
 // Task 6: Use the rest operator in a function to accept an arbitrary number of arguments, sum them, and return the result.
 
 function sum(...numbers) {
@@ -55,7 +64,17 @@ function sum(...numbers) {
 
 console.log(sum(1, 2, 3, 4, 5)); // Output: 15
 
+
 // Activity 4: Default Parameters
+
+// Task 7: Write a function that takes two parameters and returns their product,
+//  with the second parameter having a default value of 1. Log the result of calling this function with and without the second parameter.
+function multiply(a,b=1)
+{
+  return a * b;
+}
+console.log(multiply(5));
+console.log(multiply(5,7));
 
 
 // Activity 5: Enhanced Object Literals
@@ -63,5 +82,24 @@ console.log(sum(1, 2, 3, 4, 5)); // Output: 15
 
 // Task 8: Use enhanced object literals to create an object with methods and properties, and log the object to the console.
 
+const person = {
+  name: "John Doe",
+  age: 30,
+  greet() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+  }
+};
+
+person.greet();
+
 // Task 9: Create an object with computed property names based on variables and log the object to the console.
 
+const person2 = {
+  name: "Jane Doe",
+  age: 25,
+  get greeting() {
+    return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+  }
+};
+
+console.log(person2.greeting);
