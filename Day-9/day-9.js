@@ -60,11 +60,27 @@ const buttonElement = document.getElementById('button');
 
 buttonElement.classList.add('newClass');
 
+
 buttonElement.classList.remove('oldClass');
 
 // Activity 5: Event Handling
 
 // Task 9: Add a click event listener to a button that changes the text content of a paragraph.
 
+document.querySelector('button').addEventListener("click",()=>
+{
+  document.querySelector('p').textContent="paragraph neww";
 
-Task 10: Add a mouseover event listener to an element that changes its border color.
+}
+
+);
+
+// Task 10: Add a mouseover event listener to an element that changes its border color.
+
+document.querySelector('div').addEventListener("mouseover",()=>
+{
+  document.querySelector('div').style.borderColor="red";
+
+}
+
+);
