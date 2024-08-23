@@ -3,5 +3,5 @@ const img=document.getElementById("image");
 
 img.addEventListener("dblclick",()=>
 {
-    img.style.visibility=img.style.visibility==="hidden"?"visible":"hidden";
+    this.classList.toggle("hidden");
 });
