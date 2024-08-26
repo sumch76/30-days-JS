@@ -1,3 +1,5 @@
+// 2.Create a page with two iamges and a BUTTON 
+// when the button is clicked,swap source attributes of the images
 var img1=document.querySelector('#one');
 var img2=document.querySelector('#two');
 var btn=document.querySelector("button");

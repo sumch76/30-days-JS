@@ -1,4 +1,5 @@
 //create an unordered list. allow users to add and remove list items dynamically using button
+
 var add=document.querySelector("#add");
 var remove=document.querySelector("#remove");
 var input=document.querySelector("input");
