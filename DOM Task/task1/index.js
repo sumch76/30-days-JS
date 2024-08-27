@@ -1,3 +1,9 @@
+//1.create a HTML page with a button .
+
+// when the button is clicked,change the text of the a paragraph element
+
+
+
 // let btn=document.querySelector("button");
 // btn.addEventListener("click",function(){
 //     let para=document.querySelector("p");
