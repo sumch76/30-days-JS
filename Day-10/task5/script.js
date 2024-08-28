@@ -1,3 +1,4 @@
+// Add a keydown event listener to an input field that logs the key pressed to the console.
 let para=document.querySelector("p");
 para.addEventListener("keydown",()=>
 {
