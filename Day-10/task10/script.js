@@ -1,3 +1,7 @@
+// Add an event listener to a parent element that listens for events 
+// from dynamically added child elements.
+
+
 // Select the parent <ul> element and the "Add Item" button
 const list = document.querySelector('#myList');
 const addItemButton = document.querySelector('#addItem');
