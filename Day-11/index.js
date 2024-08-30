@@ -81,23 +81,112 @@
 // });
 
 // Task 4: Write an async function that waits for a promise to resolve and then logs the resolved value.
-  const promise=new Promise((resolve)=>
-{
-    setTimeout(()=>
-    {
-         resolve("async function solved!!!");//then this lastt
-    },5000)
-})
+//   const promise=new Promise((resolve)=>
+// {
+//     setTimeout(()=>
+//     {
+//          resolve("async function solved!!!");//then this lastt
+//     },5000)
+// })
 
-async function handlePromise()
-{
-    console.log("hiiiii");//it will print instantly
-    const result= await promise;
-    console.log("under async functionn");//then aftr 5 second this
+// async function handlePromise()
+// {
+//     console.log("hiiiii");//it will print instantly
+//     const result= await promise;
+//     console.log("under async functionn");//then aftr 5 second this
     
-    console.log(result);
+//     console.log(result);
     
-}
-handlePromise();
+// }
+// handlePromise();
+
+// Task 5: Write an async function that handles a rejected promise using try-catch and logs the error message.
+
+// function someAsyncFunction()
+// {
+//   return new Promise((_,reject)=>
+//   {
+//     setTimeout(()=>
+//     {
+//        reject(new Error("something went wromg"))
+//       },5000)
+   
+//   });
+// }
+// async function rejectHandlePromise()
+// {
+//   try{
+//     const result=await someAsyncFunction();
+//     console.log(result);
+    
+//   }
+//   catch(error)
+// {
+//   console.error("error:",error.message);
+// }};
+
+// rejectHandlePromise();
 
 
+// Task 6: Use the fetch API to get data from a public API and log the response data to the console using promises.
+// fetch("https://jsonplaceholder.typicode.com/posts")
+// .then(response=>response.json())
+// .then(data=>console.log("data:", data))
+// .catch(error=>console.error("error:",error.message));
+
+
+//other method and we are fetching only first 10 data from api server using slice
+
+// const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+// fetch(apiUrl)
+// .then(response=>
+// {
+//   if(!response.ok)
+//   {
+//     throw new Error(response.message);
+//   }
+//   return response.json();
+// }
+// ).then(data=>{
+//   console.log("data:",data.slice(0,10).map(items=>({
+//     id:items.id,
+//     title:items.title
+//   })));
+  
+// }).catch(error=>{
+//   console.error("error:",error.message);
+// });
+
+// Task 7: Use the fetch API to get data from a public API and 
+// log the response data to the console using async/await
+// const fetchData=async()=>
+// {
+//   try{
+//     const response=await fetch("http://fakestoreapi.com/products");
+//     const data= await response.json();
+//     console.log("data:",data.slice(0,10));
+//   }
+//   catch(error){
+//     console.error("error:",error);
+//   }
+// };
+// fetchData();
+
+// ****************OTHER WAY*******************
+// async function fetchasyncfunction()
+// {
+//   try{
+//     const response=await fetch("http://fakestoreapi.com/products");
+//     const data= await response.json();
+//     console.log("data:",data.slice(0,5));
+
+//   }
+//   catch(error){
+//     console.error("error:",error);
+//   }
+// }
+// fetchasyncfunction();
+
+
+// Task 8: Use Promise.all to wait for multiple promises to resolve and 
+// then log all their values.
