@@ -130,7 +130,7 @@ console.log("**********task 5 completed**************");
 const promise=new Promise((resolve,reject)=>
 {
     const randomNumber=Math.random();
-    if(randomNumber<0.5)
+    if(randomNumber<.5)
     {
         resolve("promise resolved");
     }
@@ -145,7 +145,7 @@ promise.then((msg)=>console.log(msg)
 
     
 
-
+console.log("**********task 6 completed**************");
 
 
 
@@ -155,7 +155,7 @@ async function handlePromise()
 {
     try{
         const randomNumber=Math.random();
-        if(randomNumber<0.5)
+        if(randomNumber<1)
         {
             const resolvedValue=await new Promise((resolve)=>resolve("async function resolved"));
             console.log(resolvedValue);
