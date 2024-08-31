@@ -171,3 +171,27 @@ async function handlePromise()
 }
 
 handlePromise();
+
+//Activity 5: Graceful Error Handling in Fetch
+
+//Task 8: Use the fetch API to request data from an invalid URL and handle the error using catch() Log an appropriate error message to the console.
+
+fetch("http://example.com/non-existent-url")
+.then((response)=>response.json())
+.then((data)=>console.log(data))
+.catch((error)=>console.error(error.message));
+
+console.log("**********task 8 completed**************");
+// Task 9: Use the fetch API to request data from an invalid URL within an async function and handle the error using try-catch. Log an appropriate error message.
+async function fetchData()
+{
+    try{
+        const response=await fetch("http://example.com/non-existent-url");
+        const data=await response.json();
+        console.log(data);
+    }
+    catch(error){
+        console.error("error:",error.message);
+    }
+}
+fetchData();
