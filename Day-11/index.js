@@ -266,12 +266,12 @@ const p1 = new Promise((resolve, reject) => {
    const p2 = new Promise((resolve, reject) => {
     setTimeout(() => {
     resolve('P2 Success');
-    }, 1000);
+    }, 5000);   
    });
    const p3 = new Promise((resolve, reject) => {
     setTimeout(() => {
     reject('P3 Fail');
-    }, 2000);
+    }, 2000);  
    });
    Promise.race([p1, p2, p3])
     .then((results) => console.log(results))
