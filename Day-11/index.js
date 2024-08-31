@@ -190,3 +190,89 @@
 
 // Task 8: Use Promise.all to wait for multiple promises to resolve and 
 // then log all their values.
+// const p1=new Promise((resolve,reject)=>
+// {
+//     setTimeout(()=>
+//     {
+//         resolve("p1 os resolved");
+//     },4000);
+// })
+
+// const p2=new Promise((resolve,reject)=>{
+//     setTimeout(()=>
+//     {
+//         resolve("p2 is resolved");
+//     },3000);
+// });
+
+// const p3=new Promise((resolve,reject)=>
+// {
+//     setTimeout(()=>
+//     {
+//         resolve("p3 is resolved");
+         
+//     },1000)
+// });
+// Promise.all([p1,p2,p3]).then((values)=>console.log(values));
+
+///extra
+// Use Promise.all to wait for multiple promises to resolve and use one reject  
+//then log all their values.
+// const r1=new Promise((res,rej)=>
+// {
+
+// setTimeout(()=>
+// {
+//     res("r1 is resolved");
+// },4000)
+// });
+
+// const r2=new Promise((res,rej)=>
+// {
+//     setTimeout(()=>
+//     {
+//         rej("r2 is rejected");
+//     },2000);
+// });
+
+// const r3=new Promise((res,rej)=>
+// {
+//     setTimeout(()=>
+//     {
+//         res("r3 is resolved");
+//     },5000);
+// });
+
+// Promise.all([r1,r2,r3]).then((results)=>console.log(results)).catch(err=>console.error(err));
+// //Output:r2 is rejected
+// Promise.allSettled([r1,r2,r3]).then((results)=>console.log(results)
+// ).catch(err=>console.log(err));
+
+// OUTPUT:[
+//     { status: 'fulfilled', value: 'r1 is resolved' },
+//     { status: 'rejected', reason: 'r2 is rejected' },
+//     { status: 'fulfilled', value: 'r3 is resolved' }
+//   ]
+
+
+
+
+// Task 9: Use Promise.race to log the value of the first promise that resolves among multiple promises.
+const p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+    resolve('P1 Success');
+    }, 3000);
+   });
+   const p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+    resolve('P2 Success');
+    }, 1000);
+   });
+   const p3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+    reject('P3 Fail');
+    }, 2000);
+   });
+   Promise.race([p1, p2, p3])
+    .then((results) => console.log(results))
+    .catch(err => console.error(err));
