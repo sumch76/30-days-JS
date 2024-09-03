@@ -10,15 +10,57 @@ function outer(){
    return inner;
 }
 outer()();
-let result=outer();
+let result=outer(); ///other wayy to do it
 result();
-    
+
 
 // Task 2: Create a closure that maintains a private counter. Implement functions to increment and get the current value of the counter.
+
+function couter()
+{
+    let count=0;
+    return {
+        increment:()=>
+        {
+            count++;
+        },
+        getCount:()=>
+        {
+            return count;
+        }
+    }
+}
+
+let counter=couter();
+
+counter.increment();
+counter.increment();
+counter.increment();
+counter.increment();
+counter.increment();
+console.log(counter.getCount()); // Output: 5
+
+/////or////
+function counter1(){
+    var count=0;
+    return function increment()
+    {
+        count++;
+        console.log(count);
+        
+    }
+
+}
+var c1=counter1();
+c1();
+c1();
+
+
 
 // Activity 2: Practical Closures
 
 // Task 3: Write a function that generates unique IDs. Use a closure to keep track of the last generated ID and increment it with each call.
+
 
 // Task 4: Create a closure that captures a user's name and returns a function that greets the user by name.
 
