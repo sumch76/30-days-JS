@@ -1,6 +1,6 @@
-// Activity 1: Understanding Closures
+// // Activity 1: Understanding Closures
 
-// Task 1: Write a function that returns another function, where the inner function accesses a variable from the outer function's scope. Call the inner function and log the result.
+// // Task 1: Write a function that returns another function, where the inner function accesses a variable from the outer function's scope. Call the inner function and log the result.
 function outer(){
    let a=23;
 
@@ -14,7 +14,7 @@ let result=outer(); ///other wayy to do it
 result();
 
 
-// Task 2: Create a closure that maintains a private counter. Implement functions to increment and get the current value of the counter.
+// // Task 2: Create a closure that maintains a private counter. Implement functions to increment and get the current value of the counter.
 
 function couter()
 {
@@ -40,7 +40,7 @@ counter.increment();
 counter.increment();
 console.log(counter.getCount()); // Output: 5
 
-/////or////
+// /////or////
 function counter1(){
     var count=0;
     return function increment()
@@ -56,9 +56,9 @@ c1();
 
 
 
-// Activity 2: Practical Closures
+// // Activity 2: Practical Closures
 
-// Task 3: Write a function that generates unique IDs. Use a closure to keep track of the last generated ID and increment it with each call.
+// // Task 3: Write a function that generates unique IDs. Use a closure to keep track of the last generated ID and increment it with each call.
 function idGenerator(){
     let lastId=0;
     return function generateId(){
@@ -75,7 +75,7 @@ console.log(g1());
 
 
 
-// Task 4: Create a closure that captures a user's name and returns a function that greets the user by name.
+// // Task 4: Create a closure that captures a user's name and returns a function that greets the user by name.
 
 function greeter(name)
 {
@@ -89,9 +89,9 @@ function greeter(name)
  greet();
 
 
-// Activity 3: Closures in Loops
+// // Activity 3: Closures in Loops
 
-// Task 5: Write a loop that creates an array of functions. Each function should log its index when called. Use a closure to ensure each function logs the correct index.
+// // Task 5: Write a loop that creates an array of functions. Each function should log its index when called. Use a closure to ensure each function logs the correct index.
 
 const functions=[];
 for(let i=0;i<5;i++)
@@ -134,9 +134,9 @@ functions2[1]();
 
 functions2[2]();
 
-// Activity 4: Module Pattern
+// // Activity 4: Module Pattern
 
-// Task 6: Use closures to create a simple module for managing a collection of items. Implement methods to add, remove, and list items.
+// // Task 6: Use closures to create a simple module for managing a collection of items. Implement methods to add, remove, and list items.
 const itemManager=(function()
 {
     let items=[];
@@ -183,9 +183,9 @@ itemManager.removeItem('Notebook'); // Attempts to remove an item not in the lis
 
 
 
-// Activity 5: Memoization
+// // Activity 5: Memoization
 
-// Task 7: Write a function that memoizes the results of another function. Use a closure to store the results of previous computations.
+// // Task 7: Write a function that memoizes the results of another function. Use a closure to store the results of previous computations.
 
 function memoize(fn) {
     const cache = {};
@@ -206,7 +206,7 @@ function fibonacci(n) {
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-// Memoized Fibonacci function
+// // Memoized Fibonacci function
 const memoizedFibonacci = memoize(fibonacci);
 
 console.log(memoizedFibonacci(6));  // 8
@@ -216,7 +216,7 @@ console.log(memoizedFibonacci(6));  // 8 (retrieved from cache)
 
 
 
-// Task 8: Create a memoized version of a function that calculates the factorial of a number.
+// // Task 8: Create a memoized version of a function that calculates the factorial of a number.
 function memoize(fn)
 {
     const cache={};
@@ -239,5 +239,57 @@ function factorial(n){
 }
 const memoizedFactorial=memoize(factorial);
 console.log(memoizedFactorial(5));
+
+
+//memoization is a technique that can be used to reduce time-consuming calculations
+// by saving previous input to something called cache and returning thr result from it
+let sum=0;
+// const calc=(n)=>
+// {
+//     for(let i=0;i<n;i++)
+//     {
+//         sum=sum+i;  
+//       }
+//         return sum;
+// }
+// function digitsum(n)
+const digitsum=(n)=>
+{
+    for(let i=0;i<=n;i++)
+    {
+        sum=sum+i;
+    }
+    return sum;
+}
+function memoize(fun){
+    const cache={};
+    return (n)=>
+    {
+        if(n in cache)
+        {
+            console.log("cache");
+            console.log(cache);
+            return cache[n];  
+        }
+        else{
+            console.log("calculating first time")
+            const result=fun(n);
+            cache[n]=result;
+            return result;
+        }
+    };
+}
+console.time();
+const memoizedSum=memoize(digitsum);
+
+console.log(memoizedSum(7));
+
+console.timeEnd();
+
+console.time();
+console.log(memoizedSum(7));
+console.timeEnd();
+
+
 
 
