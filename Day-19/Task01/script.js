@@ -5,8 +5,18 @@
 const valueToSave="hello ,localStorage";
 localStorage.setItem("myString", valueToSave);
 
-//here setItem accepting two strings key(myString)
+//here setItem accepting two strings-- key(myString)
 // and VALUE(valuetoSave)
+
 const retrievedItem=localStorage.getItem("myString");
 
 console.log(retrievedItem);
+
+
+//to remove
+
+localStorage.removeItem("myString");
+
+//or clear all
+
+localStorage.clear();
