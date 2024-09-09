@@ -5,7 +5,6 @@ const object={
     age:24
 };
 
-
 sessionStorage.setItem("userObj",JSON.stringify(object));
 
 console.log(JSON.parse(sessionStorage.getItem("userObj")));
