@@ -1,0 +1,105 @@
+@import  url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7ecec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container{
+    background-color: #2b2b35;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height:500px;
+    display:flex;
+    flex-direction: column;
+    width: 300px;
+    text-align: center; 
+}
+
+.container h1{
+    font-size: 2.6rem;
+    line-height:1.2;
+    color:blueviolet
+
+}
+.container span{
+    font-size:2.6rem;
+    color:#ffbd00;
+}
+.weather-info{
+    margin-bottom:10px;
+}
+.search input{
+    padding:10px;
+   width: calc(100% -22px); 
+   margin-bottom:10px;
+}
+
+.search button{
+    padding: 10px;
+    width:100%;
+    margin-top:18px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.search button:hover{
+    background:#0066da;
+
+}
+.weather-info{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    margin-top: -8px;
+    color: rgb(166, 214, 230);
+
+}
+.weather-info h2{
+    color: aquamarine;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+}
+.weather-icon{
+    width:50px;
+    height:50px;
+}
+
+.forecast{
+ margin-top: 40px;
+ margin-bottom: 40px;
+ box-shadow:0 0 10px rgba(9, 8, 8, 0.1) ;
+ height:auto;
+ display: flex;
+ flex-direction:column;
+ width: 310px;
+ text-align: center;
+}
+.forecast div {
+    border: 2px solid rgb(98, 83, 83);
+    margin: 10px 12px;
+    border-radius: 7px;
+  }
+  .forecast div p:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .forecast div:hover {
+    background-color: #49c68e;
+    border: none;
+    transition: all ease-in 0.3s;
+    color: white;
+  }
