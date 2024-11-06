@@ -204,3 +204,33 @@ for (var i = 0; i < 6; i++) {
   let imageURLs=['./image1.jpeg',"./image.jpg","./image.png"];
   imageURLs.forEach(url=>gallery.appendChild(createImageElement(url)));
   
+
+  //form validation
+
+  //html code
+  <body>
+    <form id="myForm">
+        <input type="text" name="name" required/>
+         <input type="email" name="email" required/>
+         <input type="submit" value="Submit"/>
+         </form>
+  </body>
+
+  function validateForm()
+  {
+    let form=document.getElementById("myForm");
+    if(form.checkValidity())
+    {
+        alert("Form submitted successfully");
+    }
+    else
+    {
+        alert("Form is not valid");
+    }
+  }
+  let form=document.getElementById("myForm");
+  form.addEventListener("submit",(e)=>
+{
+    e.preventDefault();
+    validateForm();
+ });
