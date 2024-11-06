@@ -8,8 +8,6 @@ inputField.addEventListener('keyup', ()=> {
   displayText.textContent = inputField.value;
 });
 
-
-
 //if we are using arrow function we should not use this kryword because
 //it do not have their own this context 
 // In JavaScript, the this context inside an arrow function is lexically bound,
