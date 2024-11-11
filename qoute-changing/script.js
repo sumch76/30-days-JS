@@ -33,6 +33,8 @@ function displayPeriodically(){
 }
 displayPeriodically();
 
+//alternative approach to clear interval when the page is closed
+
 //other approach is to use  setInterval instead of creating a another
 //function
 //setInterval(DisplayQuotes,5000);
