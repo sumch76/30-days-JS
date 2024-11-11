@@ -25,7 +25,6 @@ const quotes = [
         return "#" + Math.floor(Math.random()*16777215).toString(16);
     }
  }
-
  DisplayQuotes();
 
 function displayPeriodically(){
@@ -34,4 +33,7 @@ function displayPeriodically(){
 }
 displayPeriodically();
 
+//other approach is to use  setInterval instead of creating a another
+//function
+//setInterval(DisplayQuotes,5000);
 
