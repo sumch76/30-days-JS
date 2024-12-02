@@ -29,7 +29,7 @@ const quotes = [
 
 function displayPeriodically(){
     DisplayQuotes();
-    setTimeout(displayPeriodically,5000);
+    setTimeout(displayPeriodically,3000);
 }
 displayPeriodically();
 

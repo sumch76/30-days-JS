@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addSum() {
+            const a=document.getElementById("first").value;
+            const b=document.getElementById("last").value;
+            fetch(`https://sum-server.100xdevs.com/sum?a=${a}&b=${b}`)
+            .then(function(response){
+                response.text()
+                .then(function(ans)
+            {
+                document.getElementById("final").innerText="Sum: "+ans;
+            });
+            });
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="first" placeholder="enter the first no"/>
+<br></br>
+    <input type="text" id="last" placeholder="enter the last no."/><br></br>
+<button onclick="addSum()" >sum</button><br></br>
+<div id="final"></div>
+    
+</body>
+</html>
