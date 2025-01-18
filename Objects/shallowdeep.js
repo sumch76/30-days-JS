@@ -60,7 +60,7 @@ var obj={
         city:"delhi"
     }
 };
-var obj=JSON.parse(JSON.stringify(obj));
+var obj2=JSON.parse(JSON.stringify(obj));
 obj2.name="hardik";
 obj2.address.city="uttarakhand";
 console.log(obj);
