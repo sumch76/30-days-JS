@@ -26,3 +26,14 @@ console.log(obj);
 //o/p 
 //{ name: 'hardik', age: 25 } 
 //{ name: 'hardik', age: 25 } 
+
+var obj={
+    name :"sumit",
+    age:25
+};
+
+var obj2={...obj};
+obj2.name="hardik";
+
+console.log(obj2);
+console.log(obj);
