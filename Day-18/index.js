@@ -7,7 +7,6 @@ let regex=/JavaScript/g;
 let matches=str.match(regex);
 console.log(matches);
 
-
 // Task 2: Write a regular expression to match all digits in a string. Log the matches.
 
 let str2="my phone number is 123-456-7890";

@@ -35,8 +35,8 @@ let str2=['s', 'i', 'l', 'e','n','t'];
 if (areAnagram(str1, str2))
     console.log(
     "The two strings are" + 
-    " anagram of each other<br>");
+    " anagram of each other");
 else
     console.log(
     "The two strings are not" + 
-    " anagram of each other<br>");
+    " anagram of each other");

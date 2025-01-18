@@ -176,7 +176,7 @@ for (var i = 0; i < 6; i++) {
     console.log("processed data:",data);
   
   }
-  
+
   function main()
   {
     const apiUrl1='https://jsonplaceholder.typicode.com/todos/3';
