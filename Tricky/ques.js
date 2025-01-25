@@ -33,3 +33,17 @@ const answer5=students.filter((mark)=>mark.marks>60).map((stu)=>stu.name);
 console.log(answer5);
 
 //returns total marks for students with marks greater than 60 after 20 marks have been added to those who scored less than 60
+const totalMarks=students.map((mark)=>
+{
+    if(mark.marks<60)
+    {
+        mark.marks+=20;
+    }
+    return mark;
+}).filter((mark)=>mark.marks>60)
+.reduce((acc,curr)=>
+
+    acc+curr.marks,0
+);
+
+console.log(totalMarks);
