@@ -158,14 +158,14 @@ console.log(firstName,lastName);
 
 // // Question 11 : Output
 
-// function getItems(fruitList, ...args, favoriteFruit) {
-//     return [...fruitList, ...args, favoriteFruit]
-// }
+function getItems(fruitList, favoriteFruit,...args) {
+    return [...fruitList, ...args, favoriteFruit]
+}
   
-// getItems(["banana", "apple"], "pear", "orange");
+console.log(getItems(["banana", "apple"], "pear", "orange"));
 
 
-// // Question 12 : Output
+// Question 12 : Output
 
 // let c = { greeting: 'Hey!' };
 // let d;
@@ -177,8 +177,8 @@ console.log(firstName,lastName);
 
 // // Question 13 : Output
 
-// console.log({a:1} == {a:1});
-// console.log({a:1} === {a:1});
+console.log({a:1} == {a:1});
+console.log({a:1} === {a:1});
 
 
 // // Question 14 : Output
@@ -192,53 +192,41 @@ console.log(firstName,lastName);
 
 // // Question 15 : Output
 
-// const value = { number: 10 };
+const value = { number: 10 };
 
-// const multiply = (x = { ...value }) => {
-//   console.log((x.number *= 2));
-// };
+const multiply = (x = { ...value }) => {
+  console.log((x.number *= 2));
+};
 
-// multiply();
-// multiply();
-// multiply(value);
-// multiply(value);
+multiply();
+multiply();
+multiply(value);
+multiply(value);
 
 
-// // Question 16 : Output
-
-// const value = { number: 10 };
-
-// const multiply = (x = { ...value }) => {
-//   console.log((x.number *= 2));
-// };
-
-// multiply();
-// multiply();
-// multiply(value);
-// multiply(value);
 
 
 // // Question 17 : Output 
 
-// function changeAgeAndReference(person) {
-//     person.age = 25;
-//     person = {
-//       name: 'John',
-//       age: 50
-//     };
+function changeAgeAndReference(person) {
+    person.age = 25;
+    person = {
+      name: 'John',
+      age: 50
+    };
 
-//     return person;
-// }
+    return person;
+}
 
-// const personObj1 = {
-//     name: 'Alex',
-//     age: 30
-// };
+const personObj1 = {
+    name: 'Alex',
+    age: 30
+};
 
-// const personObj2 = changeAgeAndReference(personObj1);
+const personObj2 = changeAgeAndReference(personObj1);
 
-// console.log(personObj1); // -> ?
-// console.log(personObj2); // -> ?
+console.log(personObj1); // -> ?
+console.log(personObj2); // -> ?
 
 
 // // Question 18 : Shallow copy VS Deep copy
