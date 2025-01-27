@@ -107,3 +107,40 @@ function makefun()
 }
 var myfun=makefun();
 myfun();
+
+//shadowing   or closure
+let count=0;
+(function printCount()
+{
+    if(count===0)
+    {
+        let count=1; //shadowing
+        console.log(count); //1
+    }
+    console.log(count); //0
+})();
+
+
+//  Ques-2 write a function that would allow you to do this
+// var addSix=createBase(6);
+// addSix(10); //returns 16
+// addSix(15);// returns 21
+
+// function createBase(num)
+// {
+//     return function (innerNum)
+//     {
+//         console.log(innerNum+num);
+//     };
+// }
+const createBase=(num)=>
+{
+    return (innerNum)=>
+    {
+        console.log(innerNum+num);
+    };
+}
+
+var addSix=createBase(6);
+addSix(10);
+addSix(15);
