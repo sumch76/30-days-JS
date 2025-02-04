@@ -1,3 +1,19 @@
+const fetchData = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("data");
+  }, 2000);
+});
+console.log(fetchData);
+
+fetchData.then((data)=>
+{
+  console.log("data recieved " +data);
+}).catch((err)=>
+{
+  console.log("error occured "  +err);
+});
+
+
 // //task 1-Create a promise that resolves with a message after a 2-second timeout and log the message to the console.
 const promise=new Promise(()=>
 {

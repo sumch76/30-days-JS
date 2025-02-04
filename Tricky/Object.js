@@ -178,7 +178,7 @@ console.log(getItems(["banana", "apple"], "pear", "orange"));
 // // Question 13 : Output
 
 console.log({a:1} == {a:1});
-console.log({a:1} === {a:1});
+//console.log({a:1} === {a:1});
 
 
 // // Question 14 : Output
@@ -238,3 +238,63 @@ console.log(personObj2); // -> ?
 // const objclone = Object.assign({},obj);
 // const objclone = JSON.parse(JSON.stringify(employee));
 // const objclone = { ...obj };
+
+
+console.log('start');
+
+const promise1 = new Promise((resolve, reject) => {
+  console.log(1)
+  resolve(2)
+})
+
+promise1.then(res => {
+  console.log(res)
+})
+
+console.log('end');
+
+///
+console.log('start')
+
+const fn = () => (new Promise((resolve, reject) => {
+  console.log(1);
+  resolve('success')
+}))
+
+console.log('middle')
+
+fn().then(res => {
+  console.log(res)
+})
+
+console.log('end')
+//
+function job() {
+    return new Promise(function(resolve, reject) {
+        reject();
+    });
+}
+
+let promise = job();
+
+promise
+
+.then(function() {
+    console.log('Success 1');
+})
+
+.then(function() {
+    console.log('Success 2');
+})
+
+.then(function() {
+    console.log('Success 3');
+})
+
+.catch(function() {
+    console.log('Error 1');
+})
+
+.then(function() {
+    console.log('Success 4');
+});
